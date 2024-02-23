@@ -17,17 +17,21 @@ margin-right: 10px;
 transition: transform 450ms;
 padding: 10px; 
 
-
+    display: flex; /* Turn on Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .movies_list img {
-    width: 275px; /* Set the desired width */
-    height: auto; /* Maintain aspect ratio */
+    width: 275px; 
+    height: auto; 
 }
 
 .row{
     color: white;
     margin-left: 20px;
+
+  display: flex; /* Turn on Flexbox */
+   align-items: center; /* Align items vertically */
 }
 
 .banner{
@@ -44,4 +48,31 @@ padding: 10px;
     margin-left: 30px;
     padding-top: 140px;
     height: 190px;
+
+    display: flex; /* Turn on Flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Align items horizontally */
+    justify-content: center; /* Align items vertically */
+
+}
+
+@media screen and (max-width: 768px) {
+    .movies_list {
+        width: 100%; /* Adjust width to fill the screen */
+    }
+
+    .main_banner {
+        padding-top: 100px; /* Adjust padding */
+    }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 480px) {
+    .movies_list {
+        width: 100%; /* Adjust width to fill the screen */
+    }
+
+    .banner {
+        height: 400px; /* Adjust banner height */
+    }
 }
