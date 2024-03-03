@@ -1,7 +1,7 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
-    padding: 10;
+    padding: 10px;
 }
 
 body {
@@ -10,41 +10,40 @@ body {
 }
 
 .movies_list {
-width: 350%;
-object-fit: contain;
-max-height: 350px;
-margin-right: 10px;
-transition: transform 450ms;
-padding: 10px; 
+    width: 100%; /* Adjust width to fill the screen */
+    object-fit: contain;
+    max-height: 350px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    padding: 10px;
 
     display: flex; /* Turn on Flexbox */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .movies_list img {
-    width: 275px; 
-    height: auto; 
+    width: 100%; /* Adjust image width */
+    height: auto;
 }
 
-.row{
+.row {
     color: white;
     margin-left: 20px;
 
-  display: flex; /* Turn on Flexbox */
-   align-items: center; /* Align items vertically */
+    display: flex; /* Turn on Flexbox */
+    align-items: center; /* Align items vertically */
 }
 
-.banner{
+.banner {
     background-image: url('Title-Image.png');
     background-size: cover;
     background-position: center center;
-    color : white;
+    color: white;
     object-fit: contain;
     height: 600px;
-
 }
 
-.main_banner{
+.main_banner {
     margin-left: 30px;
     padding-top: 140px;
     height: 190px;
@@ -53,26 +52,33 @@ padding: 10px;
     flex-direction: column; /* Arrange items vertically */
     align-items: center; /* Align items horizontally */
     justify-content: center; /* Align items vertically */
+}
 
+@media screen and (max-width: 1024px) {
+    /* Adjust styles for tablets */
+    .banner {
+        height: 500px; /* Adjust banner height */
+    }
 }
 
 @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .banner {
+        height: 400px; /* Adjust banner height */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust styles for mobile phones */
     .movies_list {
-        width: 100%; /* Adjust width to fill the screen */
+        max-height: 250px; /* Adjust max-height for smaller screens */
+    }
+
+    .banner {
+        height: 300px; /* Adjust banner height */
     }
 
     .main_banner {
         padding-top: 100px; /* Adjust padding */
-    }
-}
-
-/* For even smaller screens */
-@media screen and (max-width: 480px) {
-    .movies_list {
-        width: 100%; /* Adjust width to fill the screen */
-    }
-
-    .banner {
-        height: 400px; /* Adjust banner height */
     }
 }
